@@ -75,7 +75,8 @@ function createReservationDateWithTime(date, time) {
 }
 
 function validateFields(req, res, next) {
-   const { data = {}, present } = req.body
+   const { data = {}, presentData } = req.body
+   const present = new Date(presentData)
 
    if (data?.["status"] && data["status"] !== "booked") {
       return next({
