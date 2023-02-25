@@ -67,6 +67,7 @@ const requiredFields = [
 function createReservationDateWithTime(date, time) {
    return new Date(date + " " + time)
 }
+// just commenting
 
 function validateFields(req, res, next) {
    const { data = {}, presentData } = req.body
